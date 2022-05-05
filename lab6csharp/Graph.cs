@@ -108,6 +108,38 @@ namespace lab6csharp
                 Console.WriteLine("Exception: " + e.Message);
             }
         }
+
+        public int[,] ReadFileLab10()
+        {
+            string line;
+            string[] subs;
+            int[,] FInfo = null;
+            try
+            {
+                StreamReader sr = new StreamReader("C:\\Users\\Макс\\Desktop\\graph_3_var.txt");
+                line = sr.ReadLine();
+                subs = line.Split();
+                this.n = Convert.ToInt32(subs[0]);
+                this.m = Convert.ToInt32(subs[1]);
+
+                FInfo = new int[m + 1, 3];
+                line = sr.ReadLine();
+                for (int i = 1; line != null; i++)
+                {
+                    subs = line.Split();
+                    FInfo[i, 0] = Convert.ToInt32(subs[0]);
+                    FInfo[i, 1] = Convert.ToInt32(subs[1]);
+                    FInfo[i, 2] = Convert.ToInt32(subs[2]);
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+            return FInfo;
+        }
     }
 }
 

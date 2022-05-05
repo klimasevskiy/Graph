@@ -12,7 +12,6 @@ namespace lab6csharp
         {
             int n = sMatrix.GetN();
             int m = sMatrix.GetM();
-            //int[,] matrix = sMatrix.GetMatrix();
 
             int arcOut = 0;
             int arcIn = 0;
