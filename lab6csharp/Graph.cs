@@ -116,7 +116,7 @@ namespace lab6csharp
             int[,] FInfo = null;
             try
             {
-                StreamReader sr = new StreamReader("C:\\Users\\Макс\\Desktop\\graph_3_var.txt");
+                StreamReader sr = new StreamReader("C:\\Users\\Макс\\source\\repos\\прогр дискр структур\\lab6csharp\\graph_3_var.txt");
                 line = sr.ReadLine();
                 subs = line.Split();
                 this.n = Convert.ToInt32(subs[0]);

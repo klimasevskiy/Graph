@@ -11,7 +11,7 @@ namespace lab6csharp
         private int[,] matrix = null;
         private int n = 0;
         private int m = 0;
-        public int[,] createMatrix(Graph graph, int[,] result)
+        public int[,] CreateMatrix(Graph graph, int[,] result)
         {
             this.n = graph.GetN();
             this.m = graph.GetM();
